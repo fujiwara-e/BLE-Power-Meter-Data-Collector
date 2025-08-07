@@ -17,7 +17,7 @@ class PowerMeter:
         
     async def find_device(self):
         """Search for power meter"""
-        device_name = os.getenv('DEVICE_NAME', 'PowerPro_39945')
+        device_name = os.getenv('DEVICE_NAME')
         print(f"Searching for {device_name}...")
         devices = await BleakScanner.discover(timeout=10)
         
